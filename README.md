@@ -1,7 +1,9 @@
 # titanic-survivor-prediction
-This ML project explores the titanic dataset and train a model based on Random Forest algorithim to predict whether a specific passengers is survived or not.
+This Machine Learning project explores the titanic dataset and train a model based on Random Forest algorithim to predict whether a specific passengers is survived or not.
 
 ## Dataest:
+Link: https://www.kaggle.com/c/titanic/data
+
 The dataset has multiple attributes that describe each passenger:
 - Pclass: the passenger calss with 1, 2, or 3 where higher numbers indicates lower classes.
 - SibSp: represents the number of siblings or spouses a passenger had aboard the Titanic.
