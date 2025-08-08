@@ -42,8 +42,32 @@ Convert categorical columns into numbers to be meaningful in the training proces
 Drop columns we don't need for they are not helpful in training.
 
 ### 4. Scaling Features:
-
+Normalize features so they all have mean = 0 and standard deviation = 1 using `StandardScaler`.
 
 
 ## Training process:
-For the training I used `RandomForestClassifier` along with 
+For the training I used `RandomForestClassifier`, along with `GridSearchCV` to help automatically test different combinations of parameters:
+| Parameter           | Values Tested        |
+| ------------------- | -------------------- |
+| `n_estimators`      | \[10, 100, 200, 500] |
+| `max_depth`         | \[None, 5, 10]       |
+| `min_samples_split` | \[2, 3, 4]           |
+
+
+## Results:
+- Final Accuracy: 0.82 (82%)
+
+Example of predicted results:
+| PassengerId | Survived |
+|-------------|----------|
+| 892         | 0        |
+| 893         | 0        |
+| 894         | 0        |
+| 895         | 0        |
+| 896         | 1        |
+| ...         | ...      |
+| 1305        | 0        |
+| 1306        | 1        |
+| 1307        | 0        |
+| 1308        | 0        |
+| 1309        | 0        |
